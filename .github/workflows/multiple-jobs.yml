@@ -12,16 +12,16 @@ jobs:
         ls
         echo "Hello Class"
 
-test_job:
-   needs: build_job
-   runs-on: ubuntu-latest
-   steps:
-   - name: Run Tests
-     run: echo "Running Tests"
+  test_job:
+    needs: build_job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Tests
+      run: echo "Running Tests"
 
-deploy_job:
-   needs: test_job
-   runs-on: ubuntu-latest
-   steps:
-   - name: Deploy
-     run: echo "Deploying"
+  deploy_job:
+    needs: test_job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      run: echo "Deploying"
